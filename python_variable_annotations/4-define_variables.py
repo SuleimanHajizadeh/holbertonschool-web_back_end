@@ -1,8 +1,5 @@
 #!/usr/bin/env python3
-"""
-Module
-"""
-
+"""Bu modul müəyyən dəyişənləri tip annotasiyaları ilə təyin edir."""
 
 a: int = 1
 pi: float = 3.14
