@@ -5,6 +5,7 @@ Bu modul bir tuple-i zoom edən funksiyanı ehtiva edir.
 
 from typing import List, Tuple
 
+
 def zoom_array(lst: Tuple, factor: int = 2) -> List:
     """
     Verilmiş tuple-i factor qədər zoom edir.
