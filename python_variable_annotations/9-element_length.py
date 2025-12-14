@@ -1,14 +1,15 @@
 #!/usr/bin/env python3
 """
-Module
+Bu modul iterable içindəki elementlərin uzunluğunu
+qaytaran funksiyanı ehtiva edir.
 """
+
 from typing import Iterable, Sequence, List, Tuple
 
 
 def element_length(lst: Iterable[Sequence]) -> List[Tuple[Sequence, int]]:
     """
-    element_lenght -- Function that takes iterable as argument
-    Return: list of tuple that contains
-    sequence and integer.
+    Verilmiş iterable içindəki hər bir elementin uzunluğunu ölçür.
+    Nəticəni (element, uzunluq) tuple-larından ibarət list kimi qaytarır.
     """
     return [(i, len(i)) for i in lst]
