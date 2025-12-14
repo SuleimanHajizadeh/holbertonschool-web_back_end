@@ -1,13 +1,7 @@
 #!/usr/bin/env python3
-"""
-Module
-"""
+"""Bu modul float tipində ədədin string nümayəndəliyini qaytaran funksiyanı ehtiva edir."""
 
 
 def to_str(n: float) -> str:
-    """
-    return string representation of the float
-    n -- float
-    Return: str
-    """
+    """Float tipində ədədin string nümayəndəliyini qaytarır."""
     return str(n)
