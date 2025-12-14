@@ -1,14 +1,9 @@
 #!/usr/bin/env python3
-"""
-Module
-"""
+"""Bu modul float-lardan ibarət listin cəmini qaytaran funksiyanı ehtiva edir."""
+
 from typing import List
 
 
 def sum_list(input_list: List[float]) -> float:
-    """
-    return string representation of the float
-    input_list -- list of floats
-    Return: their sum as a float
-    """
+    """Float-lardan ibarət listin cəmini hesablayır və float tipində qaytarır."""
     return sum(input_list)
