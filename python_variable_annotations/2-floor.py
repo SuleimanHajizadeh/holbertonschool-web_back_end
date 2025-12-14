@@ -1,15 +1,9 @@
 #!/usr/bin/env python3
-"""
-Module
-"""
+"""Bu modul float tipində ədədin floorunu qaytaran funksiyanı ehtiva edir."""
+
 import math
 
 
 def floor(n: float) -> int:
-    """
-    Keyword arguments: return floor of the float
-    n -- float
-    str2 -- str2
-    Return: int
-    """
+    """Float tipində ədədin floorunu hesablayır və int tipində qaytarır."""
     return math.floor(n)
