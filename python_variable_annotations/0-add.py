@@ -1,14 +1,6 @@
 #!/usr/bin/env python3
-"""
-Module
-"""
-
+"""Bu modul float tipində iki ədədin cəmini hesablayan funksiyanı ehtiva edir."""
 
 def add(a: float, b: float) -> float:
-    """
-    Keyword arguments:
-    a -- num1
-    b -- num2
-    Return: float
-    """
+    """İki float tipində ədədi toplayır və nəticəni float tipində qaytarır."""
     return a + b
