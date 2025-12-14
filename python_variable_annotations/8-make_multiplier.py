@@ -1,17 +1,17 @@
 #!/usr/bin/env python3
 """
-Module
+Bu modul multiplier qəbul edən və float vurma funksiyası
+qaytaran funksiyanı ehtiva edir.
 """
+
 from typing import Callable
 
 
 def make_multiplier(multiplier: float) -> Callable[[float], float]:
     """
-    Function that takes a float multiplier as argument and returns
-    a function that multiplies a float by multiplier.
-    multiplier -- float
+    Float tipində multiplier qəbul edir.
+    Qaytarılan funksiya float tipində ədəd alır və onu multiplier ilə vurur.
     """
-    def wrapper(number: float) -> float:
-        return number * multiplier
-
-    return wrapper
+    def multiply(n: float) -> float:
+        return n * multiplier
+    return multiply
