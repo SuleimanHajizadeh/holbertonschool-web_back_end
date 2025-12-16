@@ -15,9 +15,9 @@ from pathlib import Path
 # Dinamik import 1-async_comprehension.py
 file_path = Path(__file__).parent / "1-async_comprehension.py"
 spec = importlib.util.spec_from_file_location("async_comprehension", file_path)
-async_module = importlib.util.module_from_spec(spec)
+async_module = importlib.util.module_from_spec(spec) # type: ignore
 sys.modules["async_comprehension"] = async_module
-spec.loader.exec_module(async_module)
+spec.loader.exec_module(async_module) # type: ignore
 
 async_comprehension = async_module.async_comprehension
 
