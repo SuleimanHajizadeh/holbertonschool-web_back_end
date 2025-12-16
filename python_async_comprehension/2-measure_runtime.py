@@ -3,10 +3,10 @@
 
 import asyncio
 import time
-import importlib
+from importlib import import_module
 
-# Dinamik import
-module = importlib.import_module("1-async_comprehension")
+# Dinamik import Task1 faylı
+module = import_module("1-async_comprehension")
 async_comprehension = module.async_comprehension
 
 
