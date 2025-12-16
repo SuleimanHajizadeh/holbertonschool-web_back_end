@@ -1,21 +1,19 @@
 #!/usr/bin/env python3
 """
-Bu modul wait_n funksiyasını task_wait_random istifadə edərək
-eyni anda paralel coroutine-lər icra edən task_wait_n funksiyasına çevirir.
+Bu modul task_wait_n funksiyasını yaradır.
+task_wait_random istifadə edərək n ədəd coroutine işə salır
+və bitmə sırasına görə nəticələri qaytarır.
 """
 
 import asyncio
 from typing import List
-import importlib
-
-# task_wait_random import edilir, modul adı rəqəmli olduğu üçün importlib istifadə olunur
-task_wait_random = importlib.import_module('3-tasks').task_wait_random
+task_wait_random = __import__('3-tasks').task_wait_random
 
 
 async def task_wait_n(n: int, max_delay: int) -> List[float]:
     """
-    task_wait_random coroutine-lərini n dəfə işə salır və
-    alınan gecikmələri bitmə sırasına görə qaytarır.
+    n ədəd task_wait_random coroutine-i paralel işə salır
+    və nəticələri bitmə sırasına görə qaytarır.
 
     Args:
         n (int): Coroutine sayı
@@ -26,12 +24,10 @@ async def task_wait_n(n: int, max_delay: int) -> List[float]:
     """
     delays: List[float] = []
 
-    # n ədəd task yarat
     tasks = [task_wait_random(max_delay) for _ in range(n)]
 
-    # bitmə sırasına görə nəticələri topla
     for completed in asyncio.as_completed(tasks):
-        result = await completed
-        delays.append(result)
+        delay = await completed
+        delays.append(delay)
 
     return delays
