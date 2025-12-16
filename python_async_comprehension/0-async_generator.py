@@ -2,9 +2,8 @@
 """
 0-async_generator.py
 
-Bu modul 10 dəfə 1 saniyə gözləyərək
-0 ilə 10 arasında təsadüfi ədəd yaradan
-async generator təqdim edir.
+This module defines an asynchronous generator that yields
+random floating-point numbers after waiting asynchronously.
 """
 
 import asyncio
@@ -14,9 +13,9 @@ from typing import AsyncGenerator
 
 async def async_generator() -> AsyncGenerator[float, None]:
     """
-    10 dəfə asinxron olaraq 1 saniyə gözləyir
-    və hər dəfə 0 ilə 10 arasında təsadüfi float
-    ədəd yield edir.
+    This coroutine asynchronously waits for one second
+    on each iteration and yields a random float between
+    0 and 10 exactly ten times.
     """
     for _ in range(10):
         await asyncio.sleep(1)
