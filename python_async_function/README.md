@@ -165,6 +165,6 @@ python3 4-tasks.py
 ---
 
 <p align="center">
-  <b>Made with logic, precision, and science by Azer Aslanov</b>
+  <b>Made with logic, precision, and science by Suleiman Hajizadeh</b>
 </p>
 ```
