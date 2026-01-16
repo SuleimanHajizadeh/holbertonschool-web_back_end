@@ -13,8 +13,3 @@ res = index_range(page=3, page_size=15)
 print(type(res))
 print(res)
 
-bob@dylan:~$ ./0-main.py
-
-(0, 7)
-
-(30, 45)
