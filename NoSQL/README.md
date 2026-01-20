@@ -126,5 +126,4 @@ Example:
 cat 0-list_databases | mongo
 
 Author
-
-Suleyman Hajizada
+Suleiman Hajizadeh
