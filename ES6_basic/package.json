@@ -5,7 +5,7 @@
   "main": "0-constants.js",
   "type": "module",
   "scripts": {
-    "dev": "node 0-main.js",
+    "dev": "node",
     "test": "jest"
   },
   "devDependencies": {
