@@ -1,12 +1,12 @@
 export default function taskBlock(trueOrFalse) {
-  let task = false;     // block scoped
-  let task2 = true;     // block scoped
+  let task = false;
+  let task2 = true;
 
   if (trueOrFalse) {
-    let task = true;    // yalnız bu if blokunda mövcuddur
-    let task2 = false;  // yalnız bu if blokunda mövcuddur
+    let task = true;
+    let task2 = false;
   }
 
-  return [task, task2]; // əsas dəyişənlər dəyişməz qalır
+  return [task, task2];
 }
 
