@@ -1,7 +1,7 @@
 this is readme file for ES6
 <p>
 <img width="512" height="512" alt="image" src="https://github.com/user-attachments/assets/2d5205c8-f0cc-46b1-9e51-8a2867400332" />
-
+</p>
 
 #  ES6 Basics
 
