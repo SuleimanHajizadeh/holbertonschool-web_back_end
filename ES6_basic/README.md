@@ -26,17 +26,9 @@ this is readme file for ES6
 - Your code will be analyzed using the linter ESLint along with specific rules that we’ll provide
 - All of your functions must be exported
 
-## Contributing
-
--- Suleiman Hajizadeh - Holberton Student
-
 ## Versioning
 
 For my learning of backend web dev in Holberton School
-
-## Authors
-
-Suleiman Hajizadeh
 
 ## Files
 
@@ -57,3 +49,7 @@ Suleiman Hajizadeh
 | **12-main.js, 12-createReportObject.js**     | Let's create a report object                                |
 | **100-main.js, 100-createIteratorObject.js** | Iterating through report objects                            |
 | **101-main.js, 101-iterateThroughObject.js** | Iterate through object                                      |
+
+## Authors
+
+Suleiman Hajizadeh
