@@ -1,4 +1,14 @@
 {
+  "name": "es6_classes",
+  "version": "1.0.0",
+  "description": "Holberton ES6 classes exercises",
+  "type": "module",
+  "scripts": {
+    "dev": "node",
+    "test": "jest",
+    "full-test": "npm run lint && npm run test",
+    "lint": "eslint ."
+  },
   "devDependencies": {
     "@babel/core": "^7.29.0",
     "@babel/preset-env": "^7.29.0",
@@ -7,3 +17,4 @@
     "jest": "^30.2.0"
   }
 }
+
