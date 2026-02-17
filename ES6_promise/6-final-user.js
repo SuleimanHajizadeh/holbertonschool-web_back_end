@@ -9,6 +9,7 @@ export default function handleProfileSignup(firstName, lastName, fileName) {
       if (result.status === 'fulfilled') {
         return { status: 'fulfilled', value: result.value };
       } else {
+        // reject olduqda error obyektinin message-ını qaytar
         return { status: 'rejected', value: result.reason.message };
       }
     }));
