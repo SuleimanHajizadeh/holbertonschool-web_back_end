@@ -1,15 +1,16 @@
 {
-  "name": "es6_promise_project",
+  "name": "ES6_promise",
   "version": "1.0.0",
+  "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-  "dev": "node",
-  "test": "jest"
-},
+    "dev": "node",
+    "test": "jest"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
   "devDependencies": {
     "@babel/cli": "^7.28.6",
     "@babel/core": "^7.29.0",
@@ -19,3 +20,4 @@
     "jest": "^30.2.0"
   }
 }
+
