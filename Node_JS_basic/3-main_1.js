@@ -5,6 +5,6 @@ countStudents("database.csv")
         console.log("Done!");
     })
         .catch((error) => {
-        console.log(error);
+        console.log(error.message);
     });
 console.log("After!");
