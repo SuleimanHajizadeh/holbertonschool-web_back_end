@@ -1,29 +1,68 @@
 const http = require('http');
-const countStudents = require('./3-read_file_async');
+const fs = require('fs');
 
-const hostname = '127.0.0.1';
-const port = 1245;
+function countStudents(path) {
+  return new Promise((resolve, reject) => {
+    fs.readFile(path, 'utf8', (err, data) => {
+      if (err) {
+        reject(new Error('Cannot load the database'));
+        return;
+      }
 
-const app = http.createServer(async (req, res) => {
-  res.statusCode = 200;
+      const lines = data.split('\n').filter((line) => line.trim() !== '');
+
+      const students = {};
+      let total = 0;
+
+      for (let i = 1; i < lines.length; i += 1) {
+        const parts = lines[i].split(',');
+        const firstname = parts[0];
+        const field = parts[3];
+
+        if (firstname && field) {
+          if (!students[field]) students[field] = [];
+
+          students[field].push(firstname);
+          total += 1;
+        }
+      }
+
+      let output = 'This is the list of our students\n';
+      output += `Number of students: ${total}\n`;
+
+      for (const field in students) {
+        if (Object.prototype.hasOwnProperty.call(students, field)) {
+          output += `Number of students in ${field}: ${students[field].length}. List: ${students[field].join(', ')}\n`;
+        }
+      }
+
+      resolve(output.trim());
+    });
+  });
+}
+
+const app = http.createServer((req, res) => {
+  const databasePath = process.argv[2];
+
   if (req.url === '/') {
+    res.writeHead(200, { 'Content-Type': 'text/plain' });
     res.end('Hello Holberton School!');
-  } else if (req.url === '/students') {
-    let dbInfo = 'This is the list of our students\n';
-    await countStudents(process.argv[2])
-      .then((msg) => {
-        dbInfo += msg;
-        res.end(dbInfo);
+    return;
+  }
+
+  if (req.url === '/students') {
+    res.writeHead(200, { 'Content-Type': 'text/plain' });
+
+    countStudents(databasePath)
+      .then((data) => {
+        res.end(data);
       })
-      .catch((err) => {
-        dbInfo += err.message;
-        res.end(dbInfo);
+      .catch(() => {
+        res.end('Cannot load the database');
       });
   }
 });
 
-app.listen(port, hostname, () => {
-  console.log(`Server running at http://${hostname}:${port}`);
-});
+app.listen(1245);
 
 module.exports = app;
