@@ -6,3 +6,8 @@ https://intranet.hbtn.io/concepts/1174
 https://realpython.com/async-io-python/
 https://docs.python.org/3/library/asyncio.html
 https://docs.python.org/3/library/random.html#random.uniform
+https://intranet.hbtn.io/concepts/1173
+https://intranet.hbtn.io/concepts/1174
+https://peps.python.org/pep-0530/
+https://blog.pythonlibrary.org/2017/02/14/whats-new-in-python-asynchronous-comprehensions-generators/
+https://stackoverflow.com/questions/42531143/how-can-i-type-hint-a-generator-in-python-3
