@@ -30,3 +30,8 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest
 https://medium.com/data-science/javascript-es6-iterables-and-iterators-de18b54f4d4
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes
 https://www.keithcirkel.co.uk/metaprogramming-in-es6-symbols/#symbolspecies
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Typed_arrays
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap
